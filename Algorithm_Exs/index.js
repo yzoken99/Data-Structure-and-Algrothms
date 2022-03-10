@@ -1,17 +1,10 @@
-function birthdayCakeCandles(candles) {
-    // Write your code here
-    let maxCandles = 0;
-    let counter = 0;
-    for(let i = 0; i <= candles.length; i++){
-        if(candles[i] >= maxCandles){
-            maxCandles = candles[i]
-            if(){
-                
-            }
-        }
-    }
-    return maxCandles
+// function timeConversion(s) {
+//     if(s === "hh:mm:ssPM"){
 
-}
-console.log(birthdayCakeCandles([3, 2, 1, 3, 3, 3, 4]))
+//     }
 
+// }
+
+let s = "07:20:23AM"
+s = parseInt(s) +12
+console.log(s);
