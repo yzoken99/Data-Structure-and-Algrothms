@@ -1,26 +1,22 @@
-// let reverseStr = "";
-// function Myfuncton(str) {
-//   for (let i = str.length - 1; i >= 0; i--) {
-//     reverseStr += str[i];
-//   }
-//   if (reverseStr === str) {
-//     return reverseStr;
-//   } else {
-//     return `${str} not palindrome string`;
-//   }
-// }
-// console.log(Myfuncton("leve"));
-let reverseNumber = '';
-function Mynumber(n){
-    let x = n.toString()
-    for(let i = x.length-1; i >= 0; i--){
-        reverseNumber += x[i]
-    }
-    let parsedNum = parseInt(reverseNumber)
-    if(parsedNum === n){
-        return parsedNum
-    }else{
-        return 0;
-    }
+function miniMaxSum(arr) {
+  let maxVal = 0;
+  let minVal = 0;
+  let minSum = 0;
+  let maxSum = 0;
+  let res = [];
+  for (let i = 0; i <= arr.length; i++) {
+      if(arr[i] > maxVal){
+          maxVal = arr[i]
+          res.push(maxVal)
+
+      }
+  }
+  for(let j = 0; j <= res.length; j++){
+    maxSum += res[j]
+  }
+  console.log(maxVal);
+  console.log(maxSum);
+  console.log(res);
+
 }
-console.log(Mynumber(459))
+miniMaxSum([5,8,20,1,2,22])
