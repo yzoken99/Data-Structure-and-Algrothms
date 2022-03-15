@@ -1,22 +1,31 @@
-function miniMaxSum(arr) {
-  let maxVal = 0;
-  let minVal = 0;
-  let minSum = 0;
-  let maxSum = 0;
-  let res = [];
-  for (let i = 0; i <= arr.length; i++) {
-      if(arr[i] > maxVal){
-          maxVal = arr[i]
-          res.push(maxVal)
-
-      }
+function countApplesAndOranges(s, t, a, b, apples, oranges) {
+  let landedApple = 0;
+  let landedOrange = 0;
+  let appArr = [];
+  let orangeArr = [];
+  for (let i = 0; i < apples.length; i++) {
+    appArr.push(a + apples[i]);
   }
-  for(let j = 0; j <= res.length; j++){
-    maxSum += res[j]
+  for (let m = 0; m < appArr.length; m++) {
+    if (appArr[m] >= s && appArr[m] <= t) {
+      landedApple += m;
+    }
   }
-  console.log(maxVal);
-  console.log(maxSum);
-  console.log(res);
 
+  for (let j = 0; j < oranges.length; j++) {
+    orangeArr.push(b + oranges[j]);
+  }
+
+  for (let n = 0; n < orangeArr.length; n++) {
+    if (orangeArr[n] > s && orangeArr[n] < t) {
+      landedOrange += n;
+    }
+  }
+
+  console.log(appArr);
+  console.log(orangeArr);
+  console.log("landed apple", landedApple);
+  console.log("landed orange", landedOrange);
 }
-miniMaxSum([5,8,20,1,2,22])
+countApplesAndOranges(7, 11, 5, 15, [-2, 2, 1], [5, -6]);
+//                    s  t  a  b  apples     oranges
