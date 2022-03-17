@@ -1,11 +1,11 @@
-function kangaroo(x1, v1, x2, v2) {
-  while(x1 = x2){
-    if(x1 = x2){
-      break;
-    }
-    x1 += v1;
-    x2 += v2;
+function round(grades) {
+  for (let i in grades) {
+    0 <= grades[i] <= 100;
+      if ((((Math.ceil(grades[i]/5)*5) - grades[i]) < 3)  ) {
+        console.log(Math.ceil(grades[i]/5)*5);
+      } else if ((((Math.ceil(grades[i]/5)*5) - grades[i]) === 3) || grades[i] < 38 ) {
+        console.log(grades[i]);
+      } 
   }
 }
-console.log("Yes")
-kangaroo(0,2,5,3);
+round([73, 67, 38, 33]);
