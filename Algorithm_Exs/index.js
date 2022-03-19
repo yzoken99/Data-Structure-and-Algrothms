@@ -8,52 +8,31 @@
 // }
 // console.log(oddNumbers(2,5))
 
-// function commonSubstring(a, b) {
-//   for(let i = 0; i <= a.length; i++){
-//     for(let j = 0; j <= b.length; j++){
-//       if(a[i].includes(b[i])){
-//         return "YES"
-//       }else{
-//         return "NO"
-//       }
-//     }
-//   }
+// function commonSubstring(a) {
+//    for( let i in a){
+//        for(let j = 0; j <= a[i].length; j++){
+//         console.log(j);
+//        }
+//    }
 
 // }
-// console.log(commonSubstring(["hello", "hi"], ["world", "bye"]))
+// commonSubstring(["hello", "hi"])
 
-// function countDuplicates(numbers) {
-//   const res = [];
-//   let repeatNum = 0
-//    for(let i = 0; i < numbers.length; i++){
-//       if(numbers.indexOf(numbers[i]) !== numbers.lastIndexOf(numbers[i])){
-//          if(!res.includes(numbers[i])){
-//             res.push(numbers[i]);
-//          };
-//       };
-//    };
-//    for(let j = 0; j <= res.length; j++){
-//      if(res[j]){
-//        repeatNum ++
+// , ["world", "bye"]
 
-//      }
-//   }
-//   return repeatNum
 
-// }
-// console.log(countDuplicates([1,1,2,2,2,3]))
 
-function searchBST(root, val) {
-  if (root.key === null)
-      return null;
+let str1 = "Hello"
+let str2 = "World"
+let res = str1.split('')
+function myString(str1){
+    // for(let i = str1.length-1; i >=0; i--){
+    //     console.log(str1[i]);
+    // }
 
-  var nodeKey = parseInt(root.val);
-  if (val < nodeKey) {
-      return searchBST(root.left, val);
-  } else if (val > nodeKey) {
-      return searchBST(root.right, val);
-  } else {
-      return root.value;
-  }
+   return str1.split('').reduce((acc, val)=> {
+        acc = val + acc
+        return acc
+    },'')
 }
-console.log(searchBST(30,10,12,15))
+console.log(myString("Hello"))
