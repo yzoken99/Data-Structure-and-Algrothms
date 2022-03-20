@@ -29,20 +29,34 @@
 
 
 
-function countDuplicates(numbers) {
-    let res = []
-    for(let i = 0; i <= numbers.length; i++){
-        for(let j = 1; j <= numbers.length; j++){
-            if(numbers[i] == numbers[j]){
-                res.push(numbers[i])
-                // res.push()
-            }
-        }
-    }
-    return res
+// function countDuplicates(numbers) {
+//     let res = []
+//     for(let i = 0; i <= numbers.length; i++){
+//         for(let j = 1; j <= numbers.length; j++){
+//             if(numbers[i] == numbers[j]){
+//                 res.push(numbers[i])
+//                 // res.push()
+//             }
+//         }
+//     }
+//     return res
 
+// }
+// console.log(countDuplicates([1,1,2,2,2,3]))
+
+
+// REVERSE NUMBER IN A EFFICENT WAY
+
+function reverseNum(n){
+    let res = parseInt(n.toString().split('').reverse().join(''))
+    if(n < 0){
+        return res * -1
+    }else{
+        return res
+    }
 }
-console.log(countDuplicates([1,1,2,2,2,3]))
+console.log(reverseNum(-123))
+
 
 
 
