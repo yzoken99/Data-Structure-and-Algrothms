@@ -48,27 +48,41 @@
 // console.log(maxChar("i loveeeeeeee myselfffffffffffffffffffff"))
 
 
-function chunkArray(arr, n){
-    let result = [];
-    for(let i = 0; i < arr.length; i++){
-        let item = arr[i]
-        let lastArray = result[result.length-1]
-        if(!lastArray || lastArray.length === n){
-            result.push([item])
-        }else{
-            lastArray.push(item)
+// function chunkArray(arr, n){
+//     let result = [];
+//     for(let i = 0; i < arr.length; i++){
+//         let item = arr[i]
+//         let lastArray = result[result.length-1]
+//         if(!lastArray || lastArray.length === n){
+//             result.push([item])
+//         }else{
+//             lastArray.push(item)
+//         }
+//     }
+//     return result
+// }
+// console.log(chunkArray(["a", "b", "c", 'd', 'b', 't', 'y', 'q'], 4))
+
+function myNumber(n){
+    for(let i = 1; i <= n; i++){
+        let res = ''
+        for(let j = i; j > 0; j--){
+            res += "#"
         }
+
+        for(let space = n-1; space > 0; space--){
+            res += ' '
+        }
+        console.log(res)
     }
-    return result
 }
-console.log(chunkArray(["a", "b", "c", 'd', 'b', 't', 'y', 'q'], 4))
+myNumber(4)
 
 
-
-
-
-
-
+// #
+// ##
+// ###
+// ####
 
 
 
