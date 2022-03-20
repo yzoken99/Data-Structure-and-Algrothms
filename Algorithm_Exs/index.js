@@ -28,34 +28,57 @@
 
 
 
-
-// function countDuplicates(numbers) {
-//     let res = []
-//     for(let i = 0; i <= numbers.length; i++){
-//         for(let j = 1; j <= numbers.length; j++){
-//             if(numbers[i] == numbers[j]){
-//                 res.push(numbers[i])
-//                 // res.push()
-//             }
+// function maxChar(str){
+//     let charObj = {};
+//     let maxChar ='';
+//     let maxCount = 0;
+//     for(let i = 0; i <str.length; i++){
+//         const char = str[i]
+//         charObj[char] = charObj[char] + 1 || 1
+//         console.log("Count char",charObj)
+//         if(charObj[char] > maxCount){
+//             maxChar = char
+//             maxCount = charObj[char]
 //         }
 //     }
-//     return res
 
+//     return maxChar
+    
 // }
-// console.log(countDuplicates([1,1,2,2,2,3]))
+// console.log(maxChar("i loveeeeeeee myselfffffffffffffffffffff"))
 
 
-// REVERSE NUMBER IN A EFFICENT WAY
 
-function reverseNum(n){
-    let res = parseInt(n.toString().split('').reverse().join(''))
-    if(n < 0){
-        return res * -1
-    }else{
-        return res
-    }
-}
-console.log(reverseNum(-123))
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
