@@ -87,11 +87,29 @@
 
 
 
-function catAndMouse(x, y, z) {
-    
-}
-catAndMouse(1,2,3)
+// function catAndMouse(...args) {
+//     for(let i = 0; i < args.length; i++){
+//         for(let j = 1; j < args.length; j++){
+//             if(args[i].includes(args[j])){
+//                 return true
+//             }else{
+//                 return false
+//             }
 
+//         }
+//     }
+
+// }
+// console.log(catAndMouse("I love my kids", "nice"))
+
+function getNames(obj) {
+    let arr = [];
+    for(let i = 0; i < obj.length; i++){    
+        arr.push(obj[i].name)
+    }
+    return arr
+}
+console.log("as", getNames([{a:1}, {name:"Jane"},{}, {name:"Mark"}, {name:"Sophia"},{b:2}]))
 
 
 
