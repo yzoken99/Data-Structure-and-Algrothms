@@ -63,26 +63,50 @@
 // }
 // console.log(chunkArray(["a", "b", "c", 'd', 'b', 't', 'y', 'q'], 4))
 
-function myNumber(n){
-    for(let i = 1; i <= n; i++){
-        let res = ''
-        for(let j = i; j > 0; j--){
-            res += "#"
-        }
+// function myNumber(n){
+//     for(let i = 1; i <= n; i++){
+//         let res = ''
+//         for(let j = i; j > 0; j--){
+//             res += "#"
+//         }
 
-        for(let space = n-1; space > 0; space--){
-            res += ' '
-        }
-        console.log(res)
-    }
-}
-myNumber(4)
+//         for(let space = n-1; space > 0; space--){
+//             res += ' '
+//         }
+//         console.log(res)
+//     }
+// }
+// myNumber(4)
 
 
 // #
 // ##
 // ###
 // ####
+
+
+
+
+
+function bonAppetit(bill, k, b) {
+    let sumOfHonoredBill = 0;
+    let sumOfUnhonoredBill = 0;
+    for(let i = 0; i < bill.length; i++){
+        sumOfUnhonoredBill += bill[i]
+    }
+    if((sumOfUnhonoredBill/2) === b){
+        for(let j= 0; j < bill.length; j++){
+            if(j !== k){
+                sumOfHonoredBill += bill[j]
+            }
+        }
+        console.log((sumOfUnhonoredBill/2)-(sumOfHonoredBill/2))
+    }else{
+        console.log("Bon Apetite");
+    }
+
+}
+bonAppetit([3,10,2,9], 1, 12)
 
 
 
