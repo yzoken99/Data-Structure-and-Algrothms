@@ -14,19 +14,14 @@
 
 //         }
 //     }
-    
+
 // }
 // console.log(myString(["hello", "world"], ["level", "asq"]))
-
-
 
 // return str1.split('').reduce((acc, val)=> {
 //      acc = val + acc
 //      return acc
 //  },'')
-
-
-
 
 // function maxChar(str){
 //     let charObj = {};
@@ -43,10 +38,9 @@
 //     }
 
 //     return maxChar
-    
+
 // }
 // console.log(maxChar("i loveeeeeeee myselfffffffffffffffffffff"))
-
 
 // function chunkArray(arr, n){
 //     let result = [];
@@ -78,14 +72,10 @@
 // }
 // myNumber(4)
 
-
 // #
 // ##
 // ###
 // ####
-
-
-
 
 // function catAndMouse(...args) {
 //     for(let i = 0; i < args.length; i++){
@@ -102,41 +92,31 @@
 // }
 // console.log(catAndMouse("I love my kids", "nice"))
 
-function getNames(obj) {
-    let arr = [];
-    for(let i = 0; i < obj.length; i++){    
-        arr.push(obj[i].name)
+// function getNames(obj) {
+//     let arr = [];
+//     for(let i = 0; i < obj.length; i++){
+//         arr.push(obj[i].name)
+//     }
+//     return arr
+// }
+// console.log("as", getNames([{a:1}, {name:"Jane"},{}, {name:"Mark"}, {name:"Sophia"},{b:2}]))
+
+function compareTriplets(a, b) {
+  let alice_score = 0;
+  let bob_score = 0;
+  let result = [];
+
+  for (let i = 0; i <= a.length; i++) {
+    console.log(a[i], b[i]);
+    if (a[i] > b[i]) {
+      alice_score++;
+    } else if (a[i] < b[i]) {
+      bob_score++;
     }
-    return arr
+    
+  }
+  result.push(alice_score);
+  result.push(bob_score);
+  return result;
 }
-console.log("as", getNames([{a:1}, {name:"Jane"},{}, {name:"Mark"}, {name:"Sophia"},{b:2}]))
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+console.log(compareTriplets([17, 28, 30], [99, 16, 8]));
