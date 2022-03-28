@@ -101,22 +101,38 @@
 // }
 // console.log("as", getNames([{a:1}, {name:"Jane"},{}, {name:"Mark"}, {name:"Sophia"},{b:2}]))
 
-function compareTriplets(a, b) {
-  let alice_score = 0;
-  let bob_score = 0;
-  let result = [];
 
-  for (let i = 0; i <= a.length; i++) {
-    console.log(a[i], b[i]);
-    if (a[i] > b[i]) {
-      alice_score++;
-    } else if (a[i] < b[i]) {
-      bob_score++;
-    }
-    
+// function birthday(s, d, m) {
+//   let counter = 0;
+//   for(let i = 0; i <= s.length; i++){
+//     for(let j = 1; j <= s.length; j++){
+//       if(d>=1 && d <= 31 && ((s[i] + s[j]) === d) || s[i] === d ){
+//         counter++
+//         if(m >= 1 && m <= 12 && counter === m){
+//           return counter
+//         }
+//       }
+//     }
+//   }
+//   return counter
+
+// }
+// console.log(birthday([2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1], 18, 7))
+
+
+function test(arr, num){
+  let counter = 0;
+  let sum = 0;
+  for(let i = 0; i < arr.length; i++){
+        sum += arr[i]
+        if(sum === num){
+          counter++
+          // if(counter === m){
+          //   return counter
+          // }
+        }
+
   }
-  result.push(alice_score);
-  result.push(bob_score);
-  return result;
+  return counter
 }
-console.log(compareTriplets([17, 28, 30], [99, 16, 8]));
+console.log(test([2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1], 18))

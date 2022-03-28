@@ -1,22 +1,23 @@
 
-// function compareTriplets(a, b) {
-//     let alice_score = 0;
-//     let bob_score = 0;
-//     let result = [];
-//     if(a[0] > b[0]){
-//         return alice_score++
-//     } else if(a[1]===b[1]){
-//         return 0;
-//     } else if(a[2] < b[2]){
-//         return bob_score++
-//     }else{
-//         console.log("Hi");
-//     }
-//     result.push(alice_score)
-//     result.push(bob_score)
-//     console.log("Resukt",result)
-// }
-// console.log(compareTriplets([1,2,3], [0,1,1]))
+function compareTriplets(a, b) {
+    let alice_score = 0;
+    let bob_score = 0;
+    let result = [];
+  
+    for (let i = 0; i <= a.length; i++) {
+      console.log(a[i], b[i]);
+      if (a[i] > b[i]) {
+        alice_score++;
+      } else if (a[i] < b[i]) {
+        bob_score++;
+      }
+      
+    }
+    result.push(alice_score);
+    result.push(bob_score);
+    return result;
+  }
+  console.log(compareTriplets([17, 28, 30], [99, 16, 8]));
 
 
 function plusMinus(arr) {
