@@ -120,19 +120,36 @@
 // console.log(birthday([2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1], 18, 7))
 
 
-function test(arr, num){
-  let counter = 0;
-  let sum = 0;
-  for(let i = 0; i < arr.length; i++){
-        sum += arr[i]
-        if(sum === num){
-          counter++
-          // if(counter === m){
-          //   return counter
-          // }
-        }
+// function test(arr, num){
+//   let counter = 0;
+//   let sum = 0;
+//   for(let i = 0; i < arr.length; i++){
+//         sum += arr[i]
+//         if(sum === num){
+//           counter++
+//           // if(counter === m){
+//           //   return counter
+//           // }
+//         }
+
+//   }
+//   return counter
+// }
+// console.log(test([2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1], 18))
+
+
+function countdown(n){
+  if(n < 0) {
+    console.log([])
+  }else{
+    console.log(n+'\n')
+    let array = n-1
+    if(array > 0){
+      countdown(array)
+    }
 
   }
-  return counter
 }
-console.log(test([2, 5, 1, 3, 4, 4, 3, 5, 1, 1, 2, 1, 4, 1, 3, 3, 4, 2, 1], 18))
+countdown(5)
+
+
