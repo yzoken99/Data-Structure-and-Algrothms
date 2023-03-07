@@ -17,13 +17,31 @@
 
 
 // 2. Solution is more efficent anfd is O(3) notation
-function isPland(str){
-    str = str.toLowerCase()
-    let reversedString = str.split('').reverse().join('');
-    if(reversedString === str){
-        return true
-    }else{
-        return false
+// function isPland(str){
+//     str = str.toLowerCase()
+//     let reversedString = str.split('').reverse().join('');
+//     if(reversedString === str){
+//         return true
+//     }else{
+//         return false
+//     }
+// }
+// console.log(isPland("A man, a plan, a canal: Panama"))
+
+// 3. Solution is more efficent anfd is O(3) notation
+
+const isPalindrome = function(str) {
+    let arrayformattedStr = str.replace(/[\W_]+/g, "").toLowerCase()
+    if(arrayformattedStr.length == '') return true;
+    let newArrayOfStr = [];
+    for (let i = arrayformattedStr.length; i >= 0; i--) {
+        const element = arrayformattedStr[i];
+        newArrayOfStr.push(element);
     }
-}
-console.log(isPland("Level"))
+    if(arrayformattedStr == newArrayOfStr.join().replace(/[\W_]+/g, "")){
+        return true;
+    }else{
+        return false;
+    }
+};
+console.log(isPalindrome("A man, a plan, a canal: Panama"));
